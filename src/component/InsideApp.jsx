@@ -29,28 +29,30 @@ export default class InsideApp extends React.Component {
 	render() {
 		return (
 			<div id="InsideApp">
-				<div className="row">
-					<div className="col-md-3">
-						<Menu
-							selectedMenu={this.state.selectedMenu}
-							changeMenu={this.changeMenu}
-						/>
-					</div>
+				<div id="InsideApp-wrapped">
+					<div className="row">
+						<div className="col-md-3">
+							<Menu
+								selectedMenu={this.state.selectedMenu}
+								changeMenu={this.changeMenu}
+							/>
+						</div>
 
-					<div id="InsideApp-content" className="col-md-9">
-						<Switch>
-							<Route path="/network" render={(props) => <PageNetwork
-								changeMenu={this.changeMenu}
-								{...props}
-							/>}/>
-							<Route path="/partners" render={(props) => <PagePartners
-								{...props}
-							/>}/>
-							<Route path="/" render={(props) => <PageHome
-								changeMenu={this.changeMenu}
-								{...props}
-							/>}/>
-						</Switch>
+						<div id="InsideApp-content" className="col-md-9">
+							<Switch>
+								<Route path="/network" render={(props) => <PageNetwork
+									changeMenu={this.changeMenu}
+									{...props}
+								/>}/>
+								<Route path="/partners" render={(props) => <PagePartners
+									{...props}
+								/>}/>
+								<Route path="/" render={(props) => <PageHome
+									changeMenu={this.changeMenu}
+									{...props}
+								/>}/>
+							</Switch>
+						</div>
 					</div>
 				</div>
 			</div>

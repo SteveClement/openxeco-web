@@ -1,6 +1,6 @@
 import React from "react";
 import "./PageNetwork.css";
-import { getRequest } from "../"
+import { getRequest } from "../utils/request.jsx";
 
 export default class PageNetwork extends React.Component {
 	constructor(props) {
@@ -8,18 +8,22 @@ export default class PageNetwork extends React.Component {
 
 		this.state = {
 			nodes: [
-				"localhost:5000",
-				"api.db.cy.lu",
-				"api.distributed.lu",
+				"http://localhost:5000",
+				"https://api.db.cy.lu",
+				"https://api.distributed.lu",
 			],
 			nodeInformation: {},
 		};
 	}
 
-	fetchRssFeeds() {
+	componentDidMount() {
+		this.fetchNodes();
+	}
+
+	fetchNodes() {
 		this.setState({ nodeInformation: {} }, () => {
-			Promise.all(this.state.rssFeeds.map(ArticleRssFeed.fetchRssFeed)).then((data) => {
-				let nodeInformation = {};
+			Promise.all(this.state.nodes.map(PageNetwork.fetchNode)).then((data) => {
+				const nodeInformation = {};
 
 				data.forEach((d, i) => {
 					nodeInformation[this.state.nodes[i]] = d;
@@ -30,8 +34,10 @@ export default class PageNetwork extends React.Component {
 		});
 	}
 
-	static fetchRssFeed(rssFeed) {
-		return new Promise((resolve) => getRequest(rssFeed.url, (data) => {
+	static fetchNode(baseUrl) {
+		const url = baseUrl + "/network/get_node_information";
+
+		return new Promise((resolve) => getRequest(url, (data) => {
 			resolve(data);
 		}, () => {
 			resolve("ERROR");
@@ -49,7 +55,7 @@ export default class PageNetwork extends React.Component {
 			<div id="PageNetwork" className="page max-sized-page">
 				<div className={"row row-spaced"}>
 					<div className="col-md-12">
-						{this.state.ss}
+						{JSON.stringify(this.state.nodeInformation)}
 					</div>
 				</div>
 			</div>

@@ -21,7 +21,7 @@ export default class Menu extends React.Component {
 						Presentation
 					</div>
 				</Link>
-				<Link to="/companies">
+				<Link to="/network">
 					<div
 						className={"Menu-element "
 							+ (this.props.selectedMenu === "network" ? "Menu-element-selected" : "")}
