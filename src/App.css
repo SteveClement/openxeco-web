@@ -315,3 +315,19 @@ button:disabled {
 .box-subtext {
 	font-size: 13px;
 }
+
+/* LOADING BAR */
+
+.LoadingBar {
+	height: 10px !important;
+	bottom: 0 !important;
+	top: unset !important;
+}
+
+.LoadingBar > div {
+	background: #03e3e3 !important;
+}
+
+.LoadingBar > div > div {
+	display: none;
+}
