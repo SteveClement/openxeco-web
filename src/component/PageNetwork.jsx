@@ -30,7 +30,13 @@ export default class PageNetwork extends React.Component {
 
 	componentDidMount() {
 		this.fetchNodes();
-		this.setState({ engine: createEngine() });
+
+		const model = new DiagramModel();
+		const engine = createEngine();
+		engine.setModel(model);
+		this.setState({ engine }, () => {
+			this.buildDiagram();
+		});
 	}
 
 	componentDidUpdate(_, prevState) {
@@ -70,11 +76,6 @@ export default class PageNetwork extends React.Component {
 
 	buildDiagram() {
 		const canvas = document.getElementById("PageNetwork");
-
-		if (!canvas) {
-			return null;
-		}
-
 		const centerX = canvas.offsetWidth / 2;
 		const centerY = canvas.offsetHeight / 2;
 
