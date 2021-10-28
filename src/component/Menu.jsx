@@ -29,12 +29,12 @@ export default class Menu extends React.Component {
 						Network
 					</div>
 				</Link>
-				<Link to="/partners">
+				<Link to="/contact">
 					<div
 						className={"Menu-element "
-							+ (this.props.selectedMenu === "partners" ? "Menu-element-selected" : "")}
-						onClick={() => this.props.changeMenu("partners")}>
-						Partners
+							+ (this.props.selectedMenu === "contact" ? "Menu-element-selected" : "")}
+						onClick={() => this.props.changeMenu("contact")}>
+						Contact & links
 					</div>
 				</Link>
 			</div>

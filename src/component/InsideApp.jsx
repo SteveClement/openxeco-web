@@ -3,7 +3,7 @@ import "./InsideApp.css";
 import { Route, Switch } from "react-router-dom";
 import Menu from "./Menu.jsx";
 import PageHome from "./PageHome.jsx";
-import PagePartners from "./PagePartners.jsx";
+import PageContact from "./PageContact.jsx";
 import PageNetwork from "./PageNetwork.jsx";
 
 export default class InsideApp extends React.Component {
@@ -44,7 +44,7 @@ export default class InsideApp extends React.Component {
 									changeMenu={this.changeMenu}
 									{...props}
 								/>}/>
-								<Route path="/partners" render={(props) => <PagePartners
+								<Route path="/contact" render={(props) => <PageContact
 									{...props}
 								/>}/>
 								<Route path="/" render={(props) => <PageHome

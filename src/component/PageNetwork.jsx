@@ -11,6 +11,7 @@ export default class PageNetwork extends React.Component {
 
 		this.fetchNodes = this.fetchNodes.bind(this);
 		this.fetchNode = this.fetchNode.bind(this);
+		this.buildDiagram = this.buildDiagram.bind(this);
 
 		this.state = {
 			nodes: [
@@ -23,12 +24,13 @@ export default class PageNetwork extends React.Component {
 			nodeInformation: {},
 			loadingProgress: 0,
 			engine: null,
+			value: 0,
 		};
 	}
 
 	componentDidMount() {
 		this.fetchNodes();
-		this.buildDiagram();
+		this.setState({ engine: createEngine() });
 	}
 
 	componentDidUpdate(_, prevState) {
@@ -67,8 +69,6 @@ export default class PageNetwork extends React.Component {
 	}
 
 	buildDiagram() {
-		const engine = createEngine();
-
 		const canvas = document.getElementById("PageNetwork");
 
 		if (!canvas) {
@@ -129,9 +129,9 @@ export default class PageNetwork extends React.Component {
 			model.addAll(n);
 		});
 
-		engine.setModel(model);
+		this.state.engine.setModel(model);
 
-		return engine;
+		return null;
 	}
 
 	changeState(field, value) {
@@ -141,17 +141,16 @@ export default class PageNetwork extends React.Component {
 	render() {
 		return (
 			<div id="PageNetwork">
-				{this.buildDiagram()
+				{this.state.engine
 					&& <CanvasWidget
 						className="myDiagramDiv"
-						engine={this.buildDiagram()}
+						engine={this.state.engine}
 					/>
 				}
 				<LoadingBar
 					className="LoadingBar"
 					color='#f11946'
 					progress={(this.state.loadingProgress / this.state.nodes.length) * 100}
-					/* onLoaderFinished={} */
 				/>
 			</div>
 		);

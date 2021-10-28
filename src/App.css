@@ -269,7 +269,7 @@ button:disabled {
 /* NOTIFICATION */
 
 .notification-info {
-  background-color: #009fe3 !important;
+  background-color: #03e3e3 !important;
 }
 
 .notification-success {
@@ -286,7 +286,6 @@ button:disabled {
 
 .notification-container {
 	pointer-events: none;
-	opacity: 0.7;
 }
 
 /* BOX */
