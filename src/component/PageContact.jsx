@@ -52,6 +52,24 @@ export default class PageContact extends React.Component {
 					</div>
 
 					<div className="col-md-6">
+						<a href="https://matrix.to/#/!huiXzSjOcmBoFrcVoq:matrix.org?via=matrix.org">
+							<div className="box">
+								<div className="box-wrap">
+									<div className="box-logo">
+										<i className="fas fa-comments"/>
+									</div>
+									<div className="box-text">
+										Matrix server
+									</div>
+									<div className="box-subtext">
+										https://matrix.to/#/!huiXzSjOcmBoF...
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<div className="col-md-6">
 						<a href="https://github.com/CybersecurityLuxembourg">
 							<div className="box">
 								<div className="box-wrap">
