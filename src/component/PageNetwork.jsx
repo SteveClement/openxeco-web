@@ -1,5 +1,6 @@
 import React from "react";
 import "./PageNetwork.css";
+import { Link } from "react-router-dom";
 import LoadingBar from "react-top-loading-bar";
 import createEngine, { DefaultNodeModel, DiagramModel } from "@projectstorm/react-diagrams";
 import { CanvasWidget } from "@projectstorm/react-canvas-core";
@@ -15,9 +16,6 @@ export default class PageNetwork extends React.Component {
 
 		this.state = {
 			nodes: [
-				"http://localhost:5001",
-				"http://localhost:5002",
-				"http://localhost:5000",
 				"https://api.db.cy.lu",
 				"https://api.distributed.lu",
 			],
@@ -153,6 +151,15 @@ export default class PageNetwork extends React.Component {
 					color='#f11946'
 					progress={(this.state.loadingProgress / this.state.nodes.length) * 100}
 				/>
+
+				<Link to="/">
+					<div
+						className={"Menu-element "
+							+ (this.props.selectedMenu === null ? "Menu-element-selected" : "")}
+						onClick={() => this.props.changeMenu(null)}>
+						&lt;- Back to presentation
+					</div>
+				</Link>
 			</div>
 		);
 	}

@@ -11,6 +11,10 @@ export default class Menu extends React.Component {
 	}
 
 	render() {
+		if (this.props.selectedMenu === "network") {
+			return <div/>;
+		}
+
 		return (
 			<div id="Menu">
 				<Link to="/">
