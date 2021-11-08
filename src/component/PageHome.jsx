@@ -27,10 +27,9 @@ export default class PageHome extends React.Component {
 
 						<p>
 							The software solution offers multiple applications with simple UX to enhance
-							the management of a community. This includes the management of content for
-							a complete communication,
-							a repertory of the ecosystem and
-							many other functionnalities.
+							the management of a community. This includes
+							a repertory of the ecosystem, a content management system, communication tools
+							and collaboration processes between the organisation and the community.
 						</p>
 					</div>
 
@@ -41,10 +40,10 @@ export default class PageHome extends React.Component {
 									<i className="fas fa-globe-europe"/>
 								</div>
 								<div className="box-text">
-									Ecosystem awareness
+									Ecosystem promotion
 								</div>
 								<div className="box-subtext">
-									Maintain a directory and enhance your organization decision
+									Maintain a directory and enhance your organisation decision
 								</div>
 							</div>
 						</div>
@@ -77,7 +76,7 @@ export default class PageHome extends React.Component {
 								</div>
 								<div className="box-subtext">
 									Make your audience participating into the dynamic of your
-									organization
+									organisation
 								</div>
 							</div>
 						</div>
@@ -85,9 +84,9 @@ export default class PageHome extends React.Component {
 
 					<div className="col-md-12">
 						<p>
-							Each organization has access to the source code of the project to
+							Each organisation has access to the source code of the project to
 							run its own node. A node is an independant instance with its own database.
-							The administrator of the organization has a complete control on the
+							The administrator of the organisation has a complete control on the
 							data. A member of the ecosystem can take part to the data feed with restricted
 							access.
 						</p>
@@ -108,7 +107,7 @@ export default class PageHome extends React.Component {
 
 					<div className="col-md-12">
 						<p>
-							The aim is to build a complete network of organizations with a compatible
+							The aim is to build a complete network of organisations with a compatible
 							sharing system.
 						</p>
 					</div>
@@ -139,7 +138,7 @@ export default class PageHome extends React.Component {
 									Mutual promotion
 								</div>
 								<div className="box-subtext">
-									Share data to another organization to promote
+									Share data to another organisation to promote
 									yours and vice versa
 								</div>
 							</div>
@@ -153,7 +152,7 @@ export default class PageHome extends React.Component {
 									<i className="fas fa-draw-polygon"/>
 								</div>
 								<div className="box-text">
-									Standardize formats
+									Standardised formats
 								</div>
 								<div className="box-subtext">
 									Use a common data structure and the most popular taxonomies
@@ -164,7 +163,22 @@ export default class PageHome extends React.Component {
 
 					<div className="col-md-12">
 						<p>
-							**No idea what to write here yet**
+							The data collection is a key for the ecosystem management. By sharing the
+							data amongst the organisations, we build a powerful interconnection
+							system with a considerable added value.
+						</p>
+
+						<p>
+							An organisation publishes its content. Any organisation can
+							reach and fetch it to its own system. The publisher passively increases its
+							visibility while the others feed their community with interesting and accessible
+							content.
+						</p>
+
+						<p>
+							A standardised classification allows an effective synchonisation and researches
+							amongst the organisations. A standardised format allow a fast and simple exchange of
+							data.
 						</p>
 					</div>
 				</div>
@@ -177,7 +191,7 @@ export default class PageHome extends React.Component {
 					<div className="col-md-12">
 						<p>
 							A node is composed of a database and its connected API. Thanks to the API,
-							our generic web applications can get, add, delete and update data.
+							our generic web applications can create, read, update and delete data.
 						</p>
 
 						<p>
@@ -186,7 +200,7 @@ export default class PageHome extends React.Component {
 
 						<ul>
 							<li>
-								<b>Administration portal</b>: the organization can manage the accounts and
+								<b>Administration portal</b>: the organisation can manage the accounts and
 								all other objects of the system
 							</li>
 							<li>
@@ -208,7 +222,7 @@ export default class PageHome extends React.Component {
 					<div className="col-md-12">
 						<p>
 							Also, <b>additional portals</b> can access the services through the API. An
-							organization can build customized report, dashboard or any kind of
+							organisation can build customized report, dashboard or any kind of
 							application to complete its toolset.
 						</p>
 
@@ -229,7 +243,7 @@ export default class PageHome extends React.Component {
 
 						<ul>
 							<li>
-								An <b>entity</b> represents any kind of registered organization such
+								An <b>entity</b> represents any kind of registered organisation such
 								as a private company, a governmental institution or a
 								non-governmental association.
 							</li>
