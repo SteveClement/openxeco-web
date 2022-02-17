@@ -5,13 +5,9 @@ import "react-datetime/css/react-datetime.css";
 import Select from "react-select";
 import Editor from "react-medium-editor";
 import Datetime from "react-datetime";
-import { CountryDropdown, RegionDropdown } from "react-country-region-selector";
 import _ from "lodash";
-/* import DialogSelectImage from "../dialog/DialogSelectImage.jsx"; */
 import Chip from "./Chip.jsx";
 import CheckBox from "./CheckBox.jsx";
-/* import NoImage from "../box/NoImage.jsx";
-import { getApiURL } from "../../utils/env.jsx"; */
 
 function getSelectStyle() {
 	return {
@@ -142,12 +138,6 @@ export default class FormLine extends React.Component {
 					))}
 				</div>
 			</div>;
-		case "country":
-			return <CountryDropdown
-				className={this.getFormatClassName()}
-				value={this.state.value}
-				onChange={(value) => this.onChange(value)}
-			/>;
 		case "editor":
 			return <Editor
 				className={"medium-editor-element"}
@@ -159,13 +149,6 @@ export default class FormLine extends React.Component {
 					placeholder: { text: "" },
 				}}
 			/>;
-		case "region":
-			return <RegionDropdown
-				className={this.getFormatClassName()}
-				country={this.props.country}
-				value={this.state.value}
-				onChange={(value) => this.onChange(value)}
-			/>;
 		case "datetime":
 			return <Datetime
 				className={this.getFormatClassName()}
@@ -176,37 +159,6 @@ export default class FormLine extends React.Component {
 				autoFocus={this.props.autofocus}
 				onKeyDown={this.props.onKeyDown}
 			/>;
-		/* case "image":
-			return <div className={"Formline-image-wrapper"}>
-				<div className="Formline-image-display-wrapper"
-					style={{ minHeight: this.props.height !== undefined ? this.props.height : 500 }}>
-					{this.state.value !== null
-						? <img
-							className={"Formline-image"}
-							src={getApiURL() + "public/get_public_image/" + this.state.value}
-							onLoad={this.props.onLoad}
-						/>
-						: <NoImage/>
-					}
-				</div>
-				<div className={"right-buttons"}>
-					<button
-						className={"red-background"}
-						value={this.state.value}
-						onClick={() => this.onChange(null)}
-						disabled={this.state.value === null}>
-						<i className="fas fa-trash-alt"/> Remove
-					</button>
-					<DialogSelectImage
-						trigger={
-							<button>
-								<i className="fas fa-plus"/> {this.state.value === null ? "Select" : "Change"} image
-							</button>
-						}
-						validateSelection={(value) => this.onChange(value)}
-					/>
-				</div>
-			</div>; */
 		default:
 			return <input
 				className={this.getFormatClassName()}

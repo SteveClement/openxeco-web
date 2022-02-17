@@ -1,5 +1,5 @@
 {
-  "name": "fo-openxeco",
+  "name": "openxeco-web",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
@@ -7,6 +7,7 @@
     "@emotion/styled": "^11.3.0",
     "@projectstorm/react-canvas-core": "^6.6.1",
     "@projectstorm/react-diagrams": "^6.6.1",
+    "babel-eslint": "^10.1.0",
     "closest": "0.0.1",
     "dagre": "^0.8.5",
     "lodash": "^4.17.21",
@@ -40,8 +41,9 @@
     "lint-fix": "eslint --fix --ext .js --ext .jsx src"
   },
   "devDependencies": {
+    "eslint": "^7.21.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^5.0.0",
     "source-map-explorer": "^1.6.0"
   },
   "browserslist": {

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import LoadingBar from "react-top-loading-bar";
 import createEngine, { DefaultNodeModel, DiagramModel } from "@projectstorm/react-diagrams";
 import { CanvasWidget } from "@projectstorm/react-canvas-core";
-import { getRequest } from "../utils/request.jsx";
+import { getForeignRequest } from "../utils/request.jsx";
 
 export default class PageNetwork extends React.Component {
 	constructor(props) {
@@ -18,6 +18,8 @@ export default class PageNetwork extends React.Component {
 			nodes: [
 				"https://api.db.cy.lu",
 				"https://api.distributed.lu",
+				"https://api.cyber4africa.org",
+				"https://api.encryptioneurope.eu",
 			],
 			nodeInformation: {},
 			loadingProgress: 0,
@@ -60,7 +62,7 @@ export default class PageNetwork extends React.Component {
 	fetchNode(baseUrl) {
 		const url = baseUrl + "/network/get_node_information";
 
-		return new Promise((resolve) => getRequest(url, (data) => {
+		return new Promise((resolve) => getForeignRequest(url, (data) => {
 			resolve(data);
 			this.setState({ loadingProgress: this.state.loadingProgress + 1 });
 		}, () => {
