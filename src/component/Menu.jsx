@@ -38,7 +38,7 @@ export default class Menu extends React.Component {
 						className={"Menu-element "
 							+ (this.props.selectedMenu === "contact" ? "Menu-element-selected" : "")}
 						onClick={() => this.props.changeMenu("contact")}>
-						Contact & links
+						Contact & Links
 					</div>
 				</Link>
 			</div>

@@ -30,6 +30,10 @@ export default class PageContact extends React.Component {
 		return (
 			<div id="PageContact" className="page max-sized-page">
 				<div className={"row row-spaced"}>
+					<div className="col-md-12">
+						<h1>Contact</h1>
+					</div>
+
 					<div className="col-md-6">
 						<a
 							href="#"
@@ -38,7 +42,7 @@ export default class PageContact extends React.Component {
 							<div className="box">
 								<div className="box-wrap">
 									<div className="box-logo">
-										<i className="fas fa-bullhorn"/>
+										<i className="fas fa-at"/>
 									</div>
 									<div className="box-text">
 										Email address
@@ -52,17 +56,69 @@ export default class PageContact extends React.Component {
 					</div>
 
 					<div className="col-md-6">
-						<a href="https://matrix.to/#/!huiXzSjOcmBoFrcVoq:matrix.org?via=matrix.org">
+						<a
+							href="https://cybersecurity.lu"
+							target="_blank"
+							rel="noreferrer">
 							<div className="box">
 								<div className="box-wrap">
 									<div className="box-logo">
-										<i className="fas fa-comments"/>
+										<i className="far fa-paper-plane"/>
 									</div>
 									<div className="box-text">
-										Matrix server
+										CYBERLUX portal
 									</div>
 									<div className="box-subtext">
-										https://matrix.to/#/!huiXzSjOcmBoF...
+										https://cybersecurity.lu
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<div className="col-md-12">
+						<h1>Documentation</h1>
+					</div>
+
+					<div className="col-md-6">
+						<a
+							href="/pdf/openXeco presentation.pdf"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<div className="box">
+								<div className="box-wrap">
+									<div className="box-logo">
+										<i className="fas fa-file-pdf"/>
+									</div>
+									<div className="box-text">
+										openXeco presentation
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<div className="col-md-12">
+						<h1>Repositories</h1>
+					</div>
+
+					<div className="col-md-6">
+						<a
+							href="https://github.com/CybersecurityLuxembourg/openxeco-core"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<div className="box">
+								<div className="box-wrap">
+									<div className="box-logo">
+										<i className="fab fa-github"/>
+									</div>
+									<div className="box-text">
+										openxeco-core
+									</div>
+									<div className="box-subtext">
+										https://github.com/CybersecurityLuxembourg/openxeco-core
 									</div>
 								</div>
 							</div>
@@ -70,17 +126,43 @@ export default class PageContact extends React.Component {
 					</div>
 
 					<div className="col-md-6">
-						<a href="https://github.com/CybersecurityLuxembourg">
+						<a
+							href="https://github.com/CybersecurityLuxembourg/openxeco-core"
+							target="_blank"
+							rel="noreferrer"
+						>
 							<div className="box">
 								<div className="box-wrap">
 									<div className="box-logo">
 										<i className="fab fa-github"/>
 									</div>
 									<div className="box-text">
-										GitHub repositories
+										openxeco-web-portal
 									</div>
 									<div className="box-subtext">
-										https://github.com/CybersecurityLuxembourg
+										https://github.com/CybersecurityLuxembourg/openxeco-web-portal
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<div className="col-md-6">
+						<a
+							href="https://github.com/CybersecurityLuxembourg/openxeco-core"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<div className="box">
+								<div className="box-wrap">
+									<div className="box-logo">
+										<i className="fab fa-github"/>
+									</div>
+									<div className="box-text">
+										openxeco-web
+									</div>
+									<div className="box-subtext">
+										https://github.com/CybersecurityLuxembourg/openxeco-web
 									</div>
 								</div>
 							</div>

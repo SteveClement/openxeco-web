@@ -16,7 +16,6 @@ export default class PageNetwork extends React.Component {
 
 		this.state = {
 			nodes: [
-				"https://api.test.cy.lu",
 				"https://api.db.cy.lu",
 				"https://api.distributed.lu",
 				"https://api.cyber4africa.org",
