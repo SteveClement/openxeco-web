@@ -127,7 +127,7 @@ export default class PageContact extends React.Component {
 
 					<div className="col-md-6">
 						<a
-							href="https://github.com/CybersecurityLuxembourg/openxeco-core"
+							href="https://github.com/CybersecurityLuxembourg/openxeco-web-portal"
 							target="_blank"
 							rel="noreferrer"
 						>
@@ -149,7 +149,7 @@ export default class PageContact extends React.Component {
 
 					<div className="col-md-6">
 						<a
-							href="https://github.com/CybersecurityLuxembourg/openxeco-core"
+							href="https://github.com/CybersecurityLuxembourg/openxeco-web"
 							target="_blank"
 							rel="noreferrer"
 						>
