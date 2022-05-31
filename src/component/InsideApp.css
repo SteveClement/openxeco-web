@@ -15,3 +15,9 @@
 #InsideApp-content {
     padding: 20px 10px;
 }
+
+#InsideApp-ForkMe {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
